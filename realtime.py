@@ -9,7 +9,7 @@ while cap.isOpened():
     success, frame = cap.read()
 
     if success:
-        results = model(frame, save=True, conf=0.1)
+        results = model(frame, conf=0.1)
 
         annotated_frame = results[0].plot()
 
